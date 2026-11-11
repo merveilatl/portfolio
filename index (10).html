@@ -1,0 +1,349 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Merveil C. ATTOLOU — Gestionnaire de communauté</title><meta name="description" content="Créativité et analyse au service de la communication digitale et des entreprises."><meta property="og:title" content="Merveil C. ATTOLOU — Gestionnaire de communauté"><meta property="og:description" content="Créativité et analyse au service de la communication digitale et des entreprises."><meta property="og:type" content="website"><meta name="theme-color" content="#000000"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%231e8ffd%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2242%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%3EMA%3C%2Ftext%3E%3C%2Fsvg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><script>document.documentElement.className+=" js"</script><style>:root{--primary:#1e8ffd;--accent:#1e8ffd;--bg:#000000;--surface:#000000;--text:#79c140;--muted:#1e90ff;--on-primary:#ffffff;--on-accent:#ffffff;--hf:'Poppins', system-ui, sans-serif;--bf:'DM Sans', system-ui, sans-serif;--rb:999px;--rs:20px;--bs:1px solid rgba(121,193,64,0.07);--ss:0 10px 30px rgba(121,193,64,0.08);--line:rgba(121,193,64,0.13)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
+body{font-family:var(--bf);background:var(--bg);color:var(--text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}h1,h2,h3,h4{font-family:var(--hf);line-height:1.15;font-weight:700}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}.sec{padding:clamp(56px,9vw,110px) 0}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:var(--rb);font-weight:600;font-size:.95rem;border:2px solid transparent;cursor:pointer;transition:transform .2s,opacity .2s;font-family:var(--bf)}
+.btn:hover{transform:translateY(-2px);opacity:.92}.btn-primary{background:var(--primary);color:var(--on-primary)}.btn-accent{background:var(--accent);color:var(--on-accent)}.btn-ghost{border-color:currentColor;background:transparent}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.card{background:var(--surface);border-radius:var(--rs);border:var(--bs);box-shadow:var(--ss)}
+.socials{display:flex;flex-wrap:wrap;gap:.7rem}.socials a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1.5px solid currentColor;transition:transform .2s}.socials a:hover{transform:translateY(-3px)}
+.projects{display:grid;gap:1.5rem}.projects.grid,.projects.featured{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.projects.featured .big{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;align-items:center}.projects.list{grid-template-columns:1fr}
+.projects.list .project{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);align-items:center}.projects.list .project:nth-child(even) .p-img{order:2}
+.project{overflow:hidden}.p-img{aspect-ratio:16/10;overflow:hidden;background:var(--line)}.p-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.project:hover .p-img img{transform:scale(1.05)}
+.p-body{padding:1.4rem}.p-body h3{font-size:1.25rem;margin:.3rem 0 .4rem}.p-body p{color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent)}.p-link{display:inline-block;margin-top:.8rem;font-weight:600;color:var(--primary)}
+.tms{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}.tm{padding:2rem;position:relative}
+.tm::before{content:"\201C";font-family:var(--hf);font-size:4rem;line-height:1;color:var(--accent);display:block;height:2.2rem}.tm p{font-style:italic}
+.tm footer{margin-top:1.2rem;font-weight:600}.tm footer span{display:block;color:var(--muted);font-weight:400;font-size:.85rem}
+.xchips{display:flex;flex-wrap:wrap;gap:.7rem}.xchip{padding:.55rem 1.1rem;border-radius:999px;border:1.5px solid var(--line);font-weight:600;font-size:.95rem}
+.xlangs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}.xlang{padding:1rem 1.2rem;border:var(--bs);border-radius:var(--rs);display:flex;justify-content:space-between;align-items:baseline;gap:.8rem}.xlang span{color:var(--muted);font-size:.9rem;text-align:right}
+.xtext{max-width:760px}.xtext p+p{margin-top:1rem}.xlist{margin:1rem 0 0;padding-left:1.2rem}.xlist li{margin:.3rem 0}
+.mapbox{margin:1.6rem auto 0;max-width:760px;border-radius:var(--rs);overflow:hidden;border:var(--bs);aspect-ratio:16/9;background:var(--surface)}.mapbox iframe{width:100%;height:100%;border:0;display:block}
+.foot{padding:2rem 0;text-align:center;font-size:.85rem;color:var(--muted)}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.js .reveal.in{opacity:1;transform:none}
+@media(max-width:720px){.projects.featured .big,.projects.list .project{grid-template-columns:1fr}.projects.list .project:nth-child(even) .p-img{order:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+
+section[id]{scroll-margin-top:76px}
+.topbar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:68px}
+.brand{font-family:var(--hf);font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:.6rem;min-width:0}.brand img{height:36px;width:auto}.brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav{display:flex;gap:1.3rem;font-weight:600;font-size:.93rem}.nav a:hover{color:var(--primary)}
+.top-r{display:flex;align-items:center;gap:.6rem}.top-r .btn{padding:.6rem 1.1rem;font-size:.9rem}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:transparent;cursor:pointer;position:relative}
+.burger::before,.burger::after{content:"";position:absolute;left:12px;right:12px;height:2px;background:var(--text);top:16px;border-radius:2px}.burger::after{top:26px}
+.hero{background:var(--surface);position:relative;overflow:hidden}
+.hero.has-cover{background-size:cover;background-position:center;color:#fff}
+.hero.has-cover::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.74),rgba(0,0,0,.3))}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding:clamp(40px,7vw,90px) 0}
+.pill{display:inline-block;background:var(--accent);color:var(--on-accent);font-weight:700;padding:.4rem 1rem;border-radius:999px;font-size:.85rem;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.4rem,6.5vw,4.6rem);font-weight:800;letter-spacing:-.02em;overflow-wrap:anywhere}.hero h1 span{color:var(--primary)}.hero.has-cover h1 span{color:var(--accent)}
+.lead{font-size:1.15rem;margin:1.1rem 0 1.7rem;max-width:34rem;color:var(--muted)}.hero.has-cover .lead{color:rgba(255,255,255,.9)}
+.hero .cta .btn{padding:1rem 1.7rem;font-size:1.02rem}
+.portrait{position:relative;justify-self:center;width:min(380px,82%);aspect-ratio:1}
+.portrait::before{content:"";position:absolute;inset:-4%;background:var(--accent);border-radius:46% 54% 58% 42%/48% 42% 58% 52%;opacity:.35;transform:rotate(8deg)}
+.portrait .frame{position:relative;width:100%;height:100%;border-radius:46% 54% 58% 42%/48% 42% 58% 52%;overflow:hidden;background:var(--bg);display:grid;place-items:center;font-family:var(--hf);font-weight:800;font-size:4.5rem;color:var(--primary);border:4px solid var(--bg)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.strip{background:var(--primary);color:var(--on-primary)}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:center;padding:.95rem 0;font-weight:600;font-size:.92rem}.strip span{display:inline-flex;align-items:center;gap:.5rem}
+.sh{text-align:center;margin-bottom:2.4rem}.sh small{color:var(--primary);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem}.sh h2{font-size:clamp(1.8rem,4.5vw,2.8rem);margin-top:.3rem}
+.alt{background:var(--surface)}.alt .card{background:var(--bg)}
+.svcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem}
+.svc{overflow:hidden;display:flex;flex-direction:column}
+.svc-img{width:100%;max-width:none;aspect-ratio:4/3;object-fit:cover}
+.svc-body{padding:1.4rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.svc .ic{width:46px;height:46px;border-radius:14px;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;font-family:var(--hf);font-weight:800}
+.svc h3{font-size:1.2rem}.svc p{color:var(--muted);flex:1}
+.svc .ask{margin-top:.5rem;font-weight:700;color:var(--primary);display:inline-flex;align-items:center;gap:.4rem}.svc .ask:hover{text-decoration:underline}
+.about-t{max-width:760px;margin:0 auto;font-size:1.15rem;text-align:center}.about-t p+p{margin-top:1rem}
+.sig{margin-top:1.5rem;text-align:center;font-family:var(--hf);font-weight:700;color:var(--primary);font-size:1.25rem}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem}.chip{background:var(--surface);border:var(--bs);padding:.6rem 1.2rem;border-radius:999px;font-weight:600}.alt .chip{background:var(--bg)}
+.sub{font-family:var(--hf);font-weight:800;font-size:1.3rem;margin:2.2rem 0 1rem}.sub:first-child{margin-top:0}
+.pcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.pc{padding:1.4rem}.pc h4{font-size:1.1rem;margin:.6rem 0 .2rem}.pc .org{color:var(--primary);font-weight:700}.pc p{color:var(--muted);font-size:.95rem;margin-top:.5rem}
+.pc .when{display:inline-block;background:var(--primary);color:var(--on-primary);border-radius:999px;padding:.2rem .8rem;font-size:.78rem;font-weight:700}
+.band{background:var(--primary);color:var(--on-primary);border-radius:32px;padding:clamp(2rem,6vw,4rem);text-align:center}
+.band h2{font-size:clamp(1.9rem,5vw,3.2rem)}.band p{margin-top:.6rem;opacity:.9}
+.band .addr{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;font-weight:600}
+.band .cta{justify-content:center;margin:1.6rem 0}.band .socials{justify-content:center}
+.band .btn-accent{background:var(--on-primary);color:var(--primary)}
+.xc .xchips,.xc .xlangs{justify-content:center}.xc .xtext{margin:0 auto}.xc .xchip{background:var(--bg)}
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .2s}.fab:hover{transform:scale(1.08)}
+.foot{padding-bottom:5rem}
+@media(max-width:1180px){
+.nav{display:none}.burger{display:block}
+.nav.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:1rem;background:var(--bg);padding:1.1rem 20px 1.5rem;border-bottom:1px solid var(--line)}
+.hero .wrap{grid-template-columns:1fr}.portrait{order:-1;width:min(250px,62%)}
+}
+@media(max-width:420px){.top-r .btn span{display:none}.top-r .btn{padding:.6rem .8rem}}
+:root{--sp-btn:#1e8ffd;--sp-on-btn:#ffffff;--sp-promo:#d92d20;--sp-on-promo:#ffffff;--sp-badge:#1e8ffd;--sp-on-badge:#ffffff;--sp-ban:#1e8ffd;--sp-on-ban:#ffffff;--sp-cols:3}
+.shop-sec{scroll-margin-top:76px}.shop-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.6rem}
+.shop-head small{display:block;color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}.shop-head h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-top:.4rem}
+.sp-cartbtn{padding:.6rem 1.1rem;font-size:.9rem}
+.sp-ban{position:relative;border-radius:var(--rs);overflow:hidden;background:var(--sp-ban);color:var(--sp-on-ban);margin-bottom:1.6rem;display:flex;align-items:center;gap:1.2rem;padding:clamp(1.2rem,4vw,2.4rem);min-height:110px;background-size:cover;background-position:center}
+.sp-ban.has-img{min-height:clamp(170px,28vw,290px);color:#fff}.sp-ban.has-img::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.15))}.sp-ban>*{position:relative}
+.sp-logo{width:76px;height:76px;border-radius:50%;object-fit:contain;background:#fff;padding:6px;flex:none;border:2px solid rgba(255,255,255,.7)}.sp-ban h3{font-size:clamp(1.3rem,3vw,2rem)}.sp-ban p{max-width:46rem;opacity:.92;margin-top:.3rem}
+.sp-filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}.sp-f{padding:.5rem 1rem;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:inherit;font:inherit;font-weight:600;font-size:.88rem;cursor:pointer}
+.sp-f.on{background:var(--sp-btn);border-color:var(--sp-btn);color:var(--sp-on-btn)}
+.sp-grid{display:grid;grid-template-columns:repeat(var(--sp-cols),minmax(0,1fr));gap:1.2rem}
+.sp{display:flex;flex-direction:column;overflow:hidden;position:relative}.sp[hidden]{display:none}
+.sp-img{position:relative;display:block;width:100%;aspect-ratio:1/1;background:var(--line);border:0;padding:0;cursor:pointer;overflow:hidden;color:inherit}.sp-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.sp:hover .sp-img img{transform:scale(1.04)}
+.sp-ph{display:grid;place-items:center;width:100%;height:100%;font-family:var(--hf);font-size:2.6rem;color:var(--muted)}
+.sp-badge{position:absolute;top:.6rem;left:.6rem;padding:.25rem .65rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.03em;background:var(--sp-badge);color:var(--sp-on-badge)}
+.sp-b-promo{background:var(--sp-promo);color:var(--sp-on-promo)}.sp-b-best{background:var(--text);color:var(--bg)}
+.sp-more{position:absolute;right:.6rem;bottom:.6rem;background:rgba(0,0,0,.62);color:#fff;border-radius:999px;font-size:.7rem;padding:.15rem .55rem}
+.sp-off .sp-img img{filter:grayscale(1);opacity:.6}.sp-out{position:absolute;left:0;right:0;bottom:0;text-align:center;background:rgba(0,0,0,.66);color:#fff;font-size:.8rem;font-weight:700;padding:.35rem}
+.sp-b{display:flex;flex-direction:column;gap:.35rem;padding:1rem;flex:1}.sp-b h3{font-size:1.05rem;line-height:1.25;cursor:pointer;overflow-wrap:anywhere}
+.sp-d{color:var(--muted);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.sp-pr{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .6rem;margin-top:auto;padding-top:.4rem}.sp-now{font-weight:800;font-size:1.1rem}.sp-now.is-promo{color:var(--sp-promo)}
+.sp-old{color:var(--muted);text-decoration:line-through;font-size:.9rem}.sp-pct{font-size:.72rem;font-weight:700;background:var(--sp-promo);color:var(--sp-on-promo);padding:.1rem .4rem;border-radius:6px}
+.sp-add{width:100%;justify-content:center;margin-top:.5rem;background:var(--sp-btn);color:var(--sp-on-btn);padding:.7rem 1rem;font-size:.9rem;border-color:var(--sp-btn)}.sp-add[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+.sp-seller{margin-top:2.2rem;padding:1.4rem;display:flex;gap:1.2rem;align-items:flex-start;flex-wrap:wrap}.sp-seller .sl{width:60px;height:60px;object-fit:contain;border-radius:12px;background:#fff;padding:4px}
+.sp-seller h4{font-size:1.1rem;margin-bottom:.6rem}.sp-seller ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.7rem 1.6rem}
+.sp-seller li{display:flex;gap:.6rem;font-size:.92rem;align-items:flex-start}.sp-seller li svg{flex:none;color:var(--accent);margin-top:.2rem}.sp-seller li small{display:block;color:var(--muted);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase}
+.sc-fab{position:fixed;right:16px;bottom:16px;z-index:70;width:58px;height:58px;border-radius:50%;border:0;background:var(--sp-btn);color:var(--sp-on-btn);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .2s}
+.sc-fab.bump{transform:scale(1.18)}.sc-count{position:absolute;top:-4px;right:-4px;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--sp-promo);color:var(--sp-on-promo);font:700 .75rem/22px var(--bf);text-align:center}.sc-count[hidden]{display:none}
+.sc-ov{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.5);display:flex;justify-content:flex-end}.sc-ov[hidden]{display:none}
+.sc-panel{background:var(--bg);color:var(--text);width:min(440px,100%);height:100%;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.25);font-family:var(--bf);line-height:1.45}
+.sc-h{display:flex;align-items:center;justify-content:space-between;padding:.6rem .6rem .6rem 1.2rem;border-bottom:1px solid var(--line)}.sc-h h3{font-size:1.25rem}
+.sc-x{width:44px;height:44px;border:0;background:none;color:inherit;font-size:1.3rem;cursor:pointer}.sc-body{flex:1;overflow-y:auto;padding:.4rem 1.2rem;-webkit-overflow-scrolling:touch}.sc-empty{color:var(--muted);text-align:center;padding:2.5rem 0}
+.sc-row{display:grid;grid-template-columns:64px 1fr auto;gap:.8rem;padding:.8rem 0;border-bottom:1px solid var(--line);align-items:start}.sc-row img,.sc-row .sc-ph{width:64px;height:64px;object-fit:cover;border-radius:10px;background:var(--line)}
+.sc-nm{font-weight:600;line-height:1.3;overflow-wrap:anywhere}.sc-up{color:var(--muted);font-size:.85rem}.sc-q{display:inline-flex;align-items:center;margin-top:.4rem;border:1.5px solid var(--line);border-radius:999px}
+.sc-q button{width:38px;height:38px;border:0;background:none;color:inherit;font-size:1.15rem;cursor:pointer;font-weight:700}.sc-q b{min-width:1.7rem;text-align:center}
+.sc-sub{font-weight:700;text-align:right;white-space:nowrap}.sc-rm{display:block;margin:.5rem 0 0 auto;border:0;background:none;color:var(--muted);cursor:pointer;font:inherit;font-size:.8rem;text-decoration:underline;padding:.3rem 0}
+.sc-f{padding:1rem 1.2rem calc(1rem + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--bg);max-height:62vh;overflow-y:auto}.sc-tot{display:flex;justify-content:space-between;font-size:1.15rem;font-weight:800;margin-bottom:.8rem}
+.sc-form{display:grid;gap:.6rem;margin-bottom:.6rem}.sc-form:empty{display:none}.sc-form label{display:block;font-size:.8rem;font-weight:600;color:var(--muted)}
+.sc-form input,.sc-form textarea{display:block;width:100%;margin-top:.2rem;padding:.65rem .75rem;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit;font-size:16px}
+.sc-order{width:100%;justify-content:center;background:var(--sp-btn);color:var(--sp-on-btn);border-color:var(--sp-btn)}.sc-clear{margin:.6rem auto 0;display:block;border:0;background:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem;padding:.4rem}
+.sc-note{font-size:.82rem;color:var(--muted);margin-top:.6rem}.sc-err{color:#c0262d;font-size:.85rem;margin:.3rem 0;min-height:0}.sc-err:empty{display:none}
+.sc-sum{display:block;width:100%;min-height:130px;margin-top:.6rem;padding:.6rem;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);font:12px/1.4 ui-monospace,Menlo,Consolas,monospace}.sc-sum[hidden]{display:none}
+.sc-md{position:fixed;inset:0;z-index:95;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:12px}.sc-md[hidden]{display:none}
+.sc-card{background:var(--bg);color:var(--text);border-radius:var(--rs);width:min(880px,100%);max-height:94vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative;font-family:var(--bf);line-height:1.5}
+.sc-big{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:var(--line)}.sc-th{display:flex;gap:.4rem;padding:.5rem;overflow-x:auto}.sc-th img{width:56px;height:56px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid transparent;flex:none}.sc-th img.on{border-color:var(--sp-btn)}
+.sc-info{padding:1.4rem;display:flex;flex-direction:column;gap:.7rem}.sc-info h3{font-size:1.5rem;padding-right:2.4rem}.sc-info .sp-d{display:block;-webkit-line-clamp:unset;white-space:pre-line;font-size:.98rem}.sc-mx{position:absolute;top:.4rem;right:.4rem;z-index:2;background:rgba(0,0,0,.55);color:#fff;border-radius:50%}
+.sc-toast{position:fixed;left:50%;top:16px;transform:translateX(-50%);z-index:100;background:#111;color:#fff;padding:.6rem 1.1rem;border-radius:999px;font:600 .88rem var(--bf);box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90vw}.sc-toast[hidden]{display:none}
+body.sc-lock{overflow:hidden}
+@media(max-width:900px){.sp-grid{--sp-cols:2}}
+@media(max-width:480px){.sp-grid{gap:.8rem}.sp-b{padding:.75rem}.sp-b h3{font-size:.95rem}.sp-now{font-size:1rem}.sp-add{padding:.6rem .5rem;font-size:.82rem}.sp-ban{flex-direction:column;align-items:flex-start}
+.sc-card{grid-template-columns:1fr;border-radius:18px 18px 0 0}.sc-md{align-items:flex-end;padding:0}}
+@media(max-width:320px){.sp-grid{--sp-cols:1}}
+.tpl-elegant .shop-top{justify-content:center;text-align:center;flex-direction:column;align-items:center}.tpl-elegant .shop-head::after{content:"";display:block;width:56px;height:3px;background:var(--accent);margin:1.2rem auto 0}.tpl-elegant .sp-filters{justify-content:center}
+.tpl-creative .shop-head h2{font-size:clamp(2.3rem,7vw,5.2rem);text-transform:uppercase;letter-spacing:-.03em;font-weight:800;line-height:.95}.tpl-creative .sp{border:2px solid var(--text);box-shadow:none}.tpl-creative .sp-f{border:2px solid var(--text);font-weight:700}
+.tpl-minimal .shop-sec{border-top:1px solid var(--line)}.tpl-minimal .shop-head small{color:var(--muted);letter-spacing:.16em}.tpl-minimal .shop-head h2{font-weight:500;letter-spacing:-.02em}
+.tpl-minimal .sp.card{background:transparent;box-shadow:none;border:0;border-radius:0}.tpl-minimal .sp-img{border-radius:var(--rs)}.tpl-minimal .sp-b{padding:1rem 0}
+.tpl-proximite .sc-fab{bottom:88px}.tpl-proximite .shop-head h2{font-weight:800}</style></head><body class="tpl-proximite"><header class="topbar"><div class="wrap"><a class="brand" href="#"><img src="logo.png" alt="Logo"><span>CHRISTINO S</span></a><nav class="nav"><a href="#about">À propos</a><a href="#skills">Compétences</a><a href="#services">Services</a><a href="#projects">Projets</a><a href="#qualities">Qualités</a><a href="#parcours">Parcours</a><a href="#languages">Langues</a><a href="#interests">Centres d&#39;intérêt</a><a href="#shop">Boutique</a><a href="#contact">Contact</a></nav><div class="top-r"><a class="btn btn-primary" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20votre%20site." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><span>WhatsApp</span></a><button class="burger" aria-label="Menu"></button></div></div></header><section class="hero has-cover" style="background-image:url('cover.jpg')"><div class="wrap"><div><span class="pill">Gestionnaire de communauté · Créateur graphique · Développeur web · Réalisateur de tableaux personnalisés</span><h1>Merveil C. <span>ATTOLOU</span></h1><p class="lead">Créativité et analyse au service de la communication digitale et des entreprises.</p><div class="cta"><a class="btn btn-primary" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20votre%20site." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Écrire sur WhatsApp</a><a class="btn btn-ghost" href="tel:+2290151393126"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Appeler</a></div></div><div class="portrait"><div class="frame"><img src="photo.jpg" alt="Merveil C. ATTOLOU"></div></div></div></section><div class="strip"><div class="wrap"><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Abomey-Calavi, Bénin</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+229 015 139 3126</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Réponse rapide sur WhatsApp</span></div></div><section class="sec" id="about"><div class="wrap"><div class="sh reveal"><small>Qui suis-je</small><h2>À propos</h2></div><div class="about-t reveal"><p>Je suis un professionnel passionné par les tendances du numérique, avec trois années d&#39;expérience dans le domaine de l&#39;informatique, spécialisé dans la rédaction et la conception de contenus visuels pour différentes plateformes numériques. J&#39;allie créativité et analyse pour concevoir des contenus engageants et atteindre les objectifs de communication des entreprises.</p><p>Je travaille en freelance et reste ouvert aux nouvelles opportunités. Je m&#39;intéresse également au développement web, au commerce électronique, à la gestion de communauté et à la création graphique.</p></div></div></section><section class="sec alt" id="skills"><div class="wrap"><div class="sh reveal"><small>Savoir-faire</small><h2>Mes points forts</h2></div><div class="chips reveal"><span class="chip">Concepteur Web &amp; Solutions Numériques</span><span class="chip">Conception graphique</span><span class="chip">Rédaction de contenu</span><span class="chip">Gestion de communauté</span><span class="chip">Campagne digital</span><span class="chip">Logiciel : Microsoft Word, Excel, PowerPoint (Office 365), PixelLab, Canva, Photopea</span><span class="chip">Système exploité : Windows</span><span class="chip">Stratégie e-commerce en Afrique</span><span class="chip">Démarches administratives en ligne</span><span class="chip">Réalisation de tableaux décoratifs personnalisés</span></div></div></section><section class="sec" id="services"><div class="wrap"><div class="sh reveal"><small>Ce que je propose</small><h2>Mes services</h2></div><div class="svcs reveal"><div class="svc card"><div class="svc-body"><div class="ic">1</div><h3>Gestion de communauté</h3><p>Gestion et animation de communautés sur WhatsApp Business, Facebook, TikTok et d&#39;autres plateformes numériques.</p><a class="ask" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%3A%20Gestion%20de%20communaut%C3%A9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Demander sur WhatsApp</a></div></div><div class="svc card"><div class="svc-body"><div class="ic">2</div><h3>Création graphique</h3><p>Conception de visuels professionnels, affiches, brochures et flyers pour promouvoir les activités des entreprises.</p><a class="ask" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%3A%20Cr%C3%A9ation%20graphique" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Demander sur WhatsApp</a></div></div><div class="svc card"><div class="svc-body"><div class="ic">3</div><h3>Rédaction de contenu</h3><p>Rédaction de contenus destinés aux différentes plateformes numériques et à la communication des entreprises.</p><a class="ask" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%3A%20R%C3%A9daction%20de%20contenu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Demander sur WhatsApp</a></div></div><div class="svc card"><div class="svc-body"><div class="ic">4</div><h3>Concepteur Web &amp; Solutions Numériques</h3><p>Nous concevons des sites web, des portfolios professionnels, des pages commerciales,vitrine et des outils numériques personnalisés.</p><a class="ask" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%3A%20Concepteur%20Web%20%26%20Solutions%20Num%C3%A9riques" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Demander sur WhatsApp</a></div></div><div class="svc card"><div class="svc-body"><div class="ic">5</div><h3>Formation en ligne</h3><p>Formations en ligne dans les domaines du commerce électronique, des e-services et du graphisme.</p><a class="ask" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%3A%20Formation%20en%20ligne" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Demander sur WhatsApp</a></div></div><div class="svc card"><div class="svc-body"><div class="ic">6</div><h3>Tableaux personnalisés</h3><p>Réalisation de tableaux décoratifs personnalisés et de trophées.</p><a class="ask" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20%3A%20Tableaux%20personnalis%C3%A9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Demander sur WhatsApp</a></div></div></div></div></section><section class="sec alt" id="projects"><div class="wrap"><div class="sh reveal"><small>Mon travail</small><h2>Quelques réalisations</h2></div><div class="reveal"><div class="projects grid"><article class="project card"><div class="p-body"><span class="tag">Conception graphique et communication</span><h3>Entreprise de GSM</h3><p>Conception complète de visuels publicitaires destinés à promouvoir les services d&#39;une entreprise de GSM, notamment la réparation, la vente et la formation.</p><a class="p-link" href="https://drive.google.com/drive/folders/15MMdin1HpB2fEICeqyWg6l9zp3ESRark?usp=drive_link" target="_blank" rel="noopener">Voir le projet →</a></div></article><article class="project card"><div class="p-body"><span class="tag">Solution Numérique</span><h3>Business Tools</h3><p>Facture &amp; devis<br>Créez des factures et des devis professionnels à imprimer, avec votre logo, vos modalités et vos moyens de paiement.</p><a class="p-link" href="https://christino-site.github.io/business-tools" target="_blank" rel="noopener">Voir le projet →</a></div></article><article class="project card"><div class="p-body"><span class="tag">Conception Web </span><h3>SUIVI DE COLIS</h3><p>Projet de consultation du statut des commandes et colis à partir d&#39;une interface web.</p><a class="p-link" href="https://christino-site.github.io/suivi-de-colis/" target="_blank" rel="noopener">Voir le projet →</a></div></article></div></div></div></section><section class="sec" id="qualities"><div class="wrap"><div class="sh reveal"><small>Atouts</small><h2>Mes qualités</h2></div><div class="reveal xc"><div class="xchips"><span class="xchip">Dynamique</span><span class="xchip">Rigoureux</span><span class="xchip">Organisé</span><span class="xchip">Créatif</span></div></div></div></section><section class="sec alt" id="parcours"><div class="wrap"><div class="sh reveal"><small>Expérience et formation</small><h2>Mon parcours</h2></div><div class="reveal"><div class="sub">Expériences</div><div class="pcs"><div class="pc card"><h4>Prestation des services administratifs du Bénin</h4><p>Réalisation de prestations liées aux e-services et aux démarches administratives en ligne au Bénin.</p></div><div class="pc card"><h4>Campagnes publicitaires</h4><p>Conception et réalisation de campagnes publicitaires destinées aux entreprises locales.</p></div><div class="pc card"><h4>Accompagnement en e-commerce</h4><p>Accompagnement d&#39;un groupe de personnes dans l&#39;importation d&#39;articles en Afrique.</p></div><div class="pc card"><h4>Gestion de communauté</h4><p>Gestion de communautés numériques et utilisation de plateformes telles que WhatsApp Business, Facebook et TikTok.</p></div><div class="pc card"><h4>Concepteur Web</h4><p>Création d&#39;un site web destiné à la vente de produits.</p></div><div class="pc card"><h4>Installation d&#39;antenne</h4><p>Réalisation de travaux d&#39;installation d&#39;antenne.</p></div><div class="pc card"><span class="when">2024 – 2025</span><h4>Direction de travaux de maison</h4><p>Direction et suivi de travaux dirigés pour écolier.</p></div><div class="pc card"><span class="when">10/2024 – Aujourd&#39;hui</span><h4>Enseignement des cours de catéchèse</h4><p>Enseignement de cours de catéchèse.</p></div><div class="pc card"><span class="when">2024 – Aujourd&#39;hui</span><h4>Formations en ligne</h4><p>Organisation de formations en ligne dans les domaines du e-commerce, des e-services et du graphisme.</p></div><div class="pc card"><span class="when">Aujourd&#39;hui</span><h4>Réalisation de tableaux personnalisés</h4><p>Conception et réalisation de tableaux personnalisés.</p></div></div><div class="sub">Formations</div><div class="pcs"><div class="pc card"><span class="when">2026 – 2026</span><h4>Réalisation de tableaux personnalisés</h4><div class="org">Para universitaire</div><p>Conception et réalisation de tableaux personnalisés.</p></div><div class="pc card"><span class="when">2025 – 2025</span><h4>Formation en gestion de communauté</h4><p>Formation en gestion de communauté.</p></div><div class="pc card"><span class="when">2025 – 2025</span><h4>Formation en création visuelle (graphisme)</h4><p>Formation en création visuelle et graphisme.</p></div><div class="pc card"><span class="when">12/2024</span><h4>Formation technique en maintenance d&#39;antenne parabolique</h4><div class="org">NSI 7</div><p>Formation technique en maintenance d&#39;antenne parabolique.</p></div><div class="pc card"><span class="when">2023 – 2024</span><h4>Baccalauréat</h4><div class="org">INTELLECTUEL</div><p>Parcours scolaire sanctionné par le baccalauréat.</p></div><div class="pc card"><span class="when">2021 – 2021</span><h4>Formation en informatique (Opérateur de saisie)</h4><div class="org">MAHUDAGBA &amp; FILS</div><p>Formation en informatique avec spécialisation en opérateur de saisie.</p></div><div class="pc card"><span class="when">2020 – 2021</span><h4>Brevet d&#39;Études du Premier Cycle (BEPC)</h4><p>Obtention du Brevet d&#39;Études du Premier Cycle.</p></div></div></div></div></section><section class="sec" id="languages"><div class="wrap"><div class="sh reveal"><small>Communication</small><h2>Langues</h2></div><div class="reveal xc"><div class="xlangs"><div class="xlang"><b>Français</b><span>Courant</span></div><div class="xlang"><b>Anglais</b><span>Intermédiaire</span></div><div class="xlang"><b>Fon</b><span>Langue marternelle</span></div></div></div></div></section><section class="sec alt" id="interests"><div class="wrap"><div class="sh reveal"><small>En dehors du travail</small><h2>Centres d&#39;intérêt</h2></div><div class="reveal xc"><div class="xchips"><span class="xchip">Voyages</span><span class="xchip">Basketball</span><span class="xchip">Handball</span><span class="xchip">Couture</span><span class="xchip">Musique</span></div></div></div></section><section class="sec shop-sec" id="shop"><div class="wrap"><div class="shop-top"><div class="shop-head"><h2>Boutique</h2></div><button type="button" class="btn btn-ghost sp-cartbtn" data-sp="cart">Mon panier (<span class="sp-cartn">0</span>)</button></div><div class="sp-filters" role="group" aria-label="Filtrer les produits"><button type="button" class="sp-f on" data-sp="filter" data-f="all">Tous les produits</button><button type="button" class="sp-f" data-sp="filter" data-f="promo">Promotions</button></div><div class="sp-grid"><article class="sp card" data-id="7opexv0iza" data-cat="" data-promo="1"><button type="button" class="sp-img" data-sp="open" aria-label="Voir « BUSINESS TOOLS »"><img src="produit-1.jpg" alt="BUSINESS TOOLS" loading="lazy"><span class="sp-badge sp-b-best">Meilleure vente</span></button><div class="sp-b"><h3 data-sp="open">BUSINESS TOOLS</h3><p class="sp-d">(Vous pouvez le tester dans l&#39;onglet Projets)
+
+Un générateur de factures et de devis en ligne !
+
+Vous êtes entrepreneur, commerçant, prestataire de services ou chef d&#39;entreprise ? Simplifiez la création de vos factures et devis professionnels.
+
+Pourquoi choisir cet outil ?
+
+- Créez facilement des factures et des devis professionnels.
+- Gardez le contrôle de vos données ! Vous pouvez utiliser l&#39;outil directement en local, sans envoyer les informations sensibles de vos clients sur un serveur distant.
+- Un outil open source, flexible et adaptable à votre activité.
+
+Vos clients vous font confiance. Protégez leurs informations !
+
+Passez à l&#39;action ! Découvrez BUSINESS TOOLS, testez le générateur et adaptez-le à votre entreprise dès aujourd&#39;hui.
+
+Créez, personnalisez et gérez vos documents professionnels en toute simplicité !</p><div class="sp-pr"><span class="sp-now is-promo">20 000 FCFA</span><s class="sp-old">25 000 FCFA</s><span class="sp-pct">−20&nbsp;%</span></div><button type="button" class="btn sp-add" data-sp="add">Ajouter au panier</button></div></article><article class="sp card" data-id="b7h1r6k0r1" data-cat="" data-promo="1"><button type="button" class="sp-img" data-sp="open" aria-label="Voir « SUIVI DE COLIS »"><span class="sp-ph">S</span><span class="sp-badge sp-b-new">Nouveau</span></button><div class="sp-b"><h3 data-sp="open">SUIVI DE COLIS</h3><p class="sp-d">(Vous pouvez le tester dans l&#39;onglet Projets)
+
+Un système de suivi de colis en ligne !
+
+Vous êtes commerçant, vendeur en ligne ou responsable d&#39;une activité de livraison ? Facilitez le suivi des commandes et permettez à vos clients de consulter l&#39;état de leurs colis en quelques instants.
+
+Pourquoi choisir cet outil ?
+
+- Permettez à vos clients de consulter facilement le statut de leurs commandes.
+- Simplifiez le suivi des colis grâce à un système de recherche par numéro de commande et numéro de téléphone.
+- Offrez à vos clients une meilleure visibilité sur l&#39;état de leurs livraisons, les montants à régler et les éventuels frais restants.
+- Un outil pratique et accessible en ligne, adapté aux activités commerciales et aux services de livraison.
+
+Vos clients méritent d&#39;être informés à chaque étape de leur commande !
+
+Découvrez cet outil de suivi de colis, testez son fonctionnement et adaptez-le aux besoins de votre activité.
+
+Simplifiez le suivi des commandes et renforcez la confiance de vos clients !</p><div class="sp-pr"><span class="sp-now is-promo">25 000 FCFA</span><s class="sp-old">35 000 FCFA</s><span class="sp-pct">−29&nbsp;%</span></div><button type="button" class="btn sp-add" data-sp="add">Ajouter au panier</button></div></article></div></div></section><section class="sec" id="contact"><div class="wrap"><div class="band reveal"><h2>Contactez-moi</h2><p>Une question, un devis, un rendez-vous ? Je vous réponds rapidement.</p><div class="addr"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Abomey-Calavi, Godomey, Womey, Bénin</div><div class="cta"><a class="btn btn-accent" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20votre%20site." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp</a><a class="btn btn-ghost" href="tel:+2290151393126"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Appeler</a><a class="btn btn-ghost" href="mailto:serviceschristino@gmail.com"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> E-mail</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Abomey-Calavi%2C%20Godomey%2C%20Womey%2C%20B%C3%A9nin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Voir sur la carte</a></div><div class="socials"><a href="https://www.facebook.com/profile.php?id=61593593243975" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.linkedin.com/in/merveil-attolou-aa9928301" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://youtube.com/@christinocommechrist?si=yiWLJl1jnQJ1wNpl" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a><a href="https://tiktok.com/@christian.atl3" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></a><a href="https://share.google/r92Pq4w6GZJZzYcrX" target="_blank" rel="noopener" aria-label="Site web"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a></div></div></div></section><footer class="foot">© 2026 Merveil C. ATTOLOU</footer><a class="fab" href="https://wa.me/22951393126?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20votre%20site." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a><button type="button" class="sc-fab" data-sp="cart" aria-label="Mon panier"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg><span class="sc-count" id="sc-count" hidden>0</span></button><div class="sc-ov" id="sc-ov" hidden><aside class="sc-panel" role="dialog" aria-modal="true" aria-labelledby="sc-title"><div class="sc-h"><h3 id="sc-title">Mon panier</h3><button type="button" class="sc-x" data-sp="close" aria-label="Fermer le panier">✕</button></div><div class="sc-body"><p class="sc-empty" id="sc-empty">Votre panier est vide.</p><div id="sc-items"></div></div><div class="sc-f" id="sc-foot" hidden><div class="sc-tot"><span>Total</span><b id="sc-total"></b></div><div class="sc-form" id="sc-form"></div><p class="sc-err" id="sc-err" role="alert"></p><button type="button" class="btn sc-order" data-sp="order">Passer commande</button><p class="sc-note" id="sc-note">Votre commande sera rédigée dans WhatsApp : il ne vous restera qu&#39;à l&#39;envoyer.</p><textarea class="sc-sum" id="sc-sum" readonly hidden aria-label="Récapitulatif de la commande"></textarea><button type="button" class="sc-clear" data-sp="clear">Vider le panier</button></div></aside></div><div class="sc-md" id="sc-md" hidden><div class="sc-card" id="sc-mc" role="dialog" aria-modal="true"></div></div><div class="sc-toast" id="sc-toast" role="status" hidden></div><script type="application/json" id="cf-shop-data">{"k":"cfshop_0wlf10pwe4","n":"Merveil C. ATTOLOU","cur":"FCFA","pos":"after","items":[{"id":"7opexv0iza","n":"BUSINESS TOOLS","d":"(Vous pouvez le tester dans l'onglet Projets)\n\nUn générateur de factures et de devis en ligne !\n\nVous êtes entrepreneur, commerçant, prestataire de services ou chef d'entreprise ? Simplifiez la création de vos factures et devis professionnels.\n\nPourquoi choisir cet outil ?\n\n- Créez facilement des factures et des devis professionnels.\n- Gardez le contrôle de vos données ! Vous pouvez utiliser l'outil directement en local, sans envoyer les informations sensibles de vos clients sur un serveur distant.\n- Un outil open source, flexible et adaptable à votre activité.\n\nVos clients vous font confiance. Protégez leurs informations !\n\nPassez à l'action ! Découvrez BUSINESS TOOLS, testez le générateur et adaptez-le à votre entreprise dès aujourd'hui.\n\nCréez, personnalisez et gérez vos documents professionnels en toute simplicité !","p":20000,"o":25000,"a":1,"im":["produit-1.jpg"]},{"id":"b7h1r6k0r1","n":"SUIVI DE COLIS","d":"(Vous pouvez le tester dans l'onglet Projets)\n\nUn système de suivi de colis en ligne !\n\nVous êtes commerçant, vendeur en ligne ou responsable d'une activité de livraison ? Facilitez le suivi des commandes et permettez à vos clients de consulter l'état de leurs colis en quelques instants.\n\nPourquoi choisir cet outil ?\n\n- Permettez à vos clients de consulter facilement le statut de leurs commandes.\n- Simplifiez le suivi des colis grâce à un système de recherche par numéro de commande et numéro de téléphone.\n- Offrez à vos clients une meilleure visibilité sur l'état de leurs livraisons, les montants à régler et les éventuels frais restants.\n- Un outil pratique et accessible en ligne, adapté aux activités commerciales et aux services de livraison.\n\nVos clients méritent d'être informés à chaque étape de leur commande !\n\nDécouvrez cet outil de suivi de colis, testez son fonctionnement et adaptez-le aux besoins de votre activité.\n\nSimplifiez le suivi des commandes et renforcez la confiance de vos clients !","p":25000,"o":35000,"a":1,"im":[]}],"o":{"type":"wa","wa":"22951393126","url":"","msg":"Bonjour, je souhaite passer la commande suivante :"},"fields":[{"k":"name","l":"Nom"},{"k":"phone","l":"Téléphone"}],"fr":false,"t":{"add":"Ajouter au panier","unavailable":"Indisponible","added":"Ajouté au panier","unit":" / unité","less":"Diminuer la quantité","more":"Augmenter la quantité","remove":"Retirer","close":"Fermer","clear":"Vider le panier","clearSure":"Confirmer : vider le panier ?","shopLbl":"Boutique","orderLbl":"Commande","custLbl":"Client","need":"Merci de renseigner :","noWa":"La commande par WhatsApp n'est pas configurée sur ce site.","noUrl":"Le lien de commande n'est pas configuré sur ce site.","waDone":"WhatsApp s'ouvre avec votre commande déjà rédigée. Appuyez sur « Envoyer » dans WhatsApp pour la transmettre : tant que ce n'est pas fait, la commande n'est pas envoyée.","linkMsgDone":"Une page externe s'est ouverte avec le récapitulatif joint au lien. Nous ne pouvons pas vérifier qu'elle l'a bien reçu : vérifiez sur cette page. Votre commande n'est pas confirmée tant que ce n'est pas fait.","linkDone":"Une page externe s'est ouverte. Elle ne reçoit pas le contenu de votre panier : votre récapitulatif est affiché ci-dessous (et copié si votre navigateur l'autorise). Recopiez-le dans votre demande. Votre commande n'est pas encore envoyée."}}</script><script>(function cfShopClient() {
+    var D;
+    try { D = JSON.parse(document.getElementById('cf-shop-data').textContent); } catch (e) { return; }
+    var doc = document, P = {}, cart = {}, cur = 'all', tmr, ctm;
+    D.items.forEach(function (p) { P[p.id] = p; });
+    function $(s, r) { return (r || doc).querySelector(s); }
+    function $$(s, r) { return [].slice.call((r || doc).querySelectorAll(s)); }
+    function el(tag, cls, txt) { var e = doc.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+    function fmt(n) {
+      n = Math.round(n * 100) / 100;
+      var a = String(n).split('.'), i = a[0].replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0'), t = a[1] ? i + ',' + (a[1].length < 2 ? a[1] + '0' : a[1]) : i;
+      return !D.cur ? t : (D.pos === 'before' ? D.cur + '\u00a0' + t : t + '\u00a0' + D.cur);
+    }
+    function load() {
+      try {
+        var j = JSON.parse(localStorage.getItem(D.k) || '{}'), c = {};
+        Object.keys(j || {}).forEach(function (id) { var q = parseInt(j[id], 10); if (P[id] && P[id].a && q > 0) c[id] = Math.min(q, 99); });
+        cart = c;
+      } catch (e) { /* stockage indisponible : le panier reste en mémoire */ }
+    }
+    function save() { try { localStorage.setItem(D.k, JSON.stringify(cart)); } catch (e) { /* ignoré */ } }
+    function count() { return Object.keys(cart).reduce(function (n, id) { return n + cart[id]; }, 0); }
+    function total() { return Object.keys(cart).reduce(function (s, id) { return s + P[id].p * cart[id]; }, 0); }
+    function toast(t) {
+      var e = $('#sc-toast'); e.textContent = t; e.hidden = false; clearTimeout(tmr);
+      tmr = setTimeout(function () { e.hidden = true; }, 1700);
+    }
+    function lock() { doc.body.classList.toggle('sc-lock', !$('#sc-ov').hidden || !$('#sc-md').hidden); }
+    function renderCount() {
+      var n = count(), c = $('#sc-count');
+      c.textContent = n; c.hidden = !n;
+      $$('.sp-cartn').forEach(function (e) { e.textContent = n; });
+    }
+    function renderCart() {
+      var box = $('#sc-items'), ids = Object.keys(cart);
+      box.textContent = '';
+      $('#sc-empty').hidden = ids.length > 0;
+      $('#sc-foot').hidden = ids.length === 0;
+      ids.forEach(function (id) {
+        var p = P[id], q = cart[id], row = el('div', 'sc-row'), mid = el('div'), end = el('div'), im;
+        row.setAttribute('data-id', id);
+        if (p.im[0]) { im = el('img'); im.src = p.im[0]; im.alt = ''; } else im = el('div', 'sc-ph');
+        mid.appendChild(el('div', 'sc-nm', p.n));
+        mid.appendChild(el('div', 'sc-up', fmt(p.p) + D.t.unit));
+        var qc = el('div', 'sc-q'), dn = el('button', '', '−'), up = el('button', '', '+');
+        dn.type = up.type = 'button'; dn.setAttribute('data-sp', 'dec'); up.setAttribute('data-sp', 'inc');
+        dn.setAttribute('aria-label', D.t.less + ' : ' + p.n); up.setAttribute('aria-label', D.t.more + ' : ' + p.n);
+        qc.appendChild(dn); qc.appendChild(el('b', '', String(q))); qc.appendChild(up);
+        mid.appendChild(qc);
+        end.appendChild(el('div', 'sc-sub', fmt(p.p * q)));
+        var rm = el('button', 'sc-rm', D.t.remove); rm.type = 'button'; rm.setAttribute('data-sp', 'rm');
+        end.appendChild(rm);
+        row.appendChild(im); row.appendChild(mid); row.appendChild(end);
+        box.appendChild(row);
+      });
+      $('#sc-total').textContent = fmt(total());
+    }
+    function renderAll() { renderCount(); renderCart(); }
+    function setQty(id, q) {
+      if (!P[id]) return;
+      if (q <= 0) delete cart[id]; else cart[id] = Math.min(99, q);
+      save(); renderAll();
+    }
+    function add(id) {
+      var p = P[id]; if (!p || !p.a) return;
+      setQty(id, (cart[id] || 0) + 1);
+      toast(D.t.added);
+      var f = $('.sc-fab'); f.classList.add('bump'); setTimeout(function () { f.classList.remove('bump'); }, 250);
+    }
+    function openCart() { $('#sc-ov').hidden = false; lock(); $('#sc-note').hidden = false; var x = $('#sc-ov .sc-x'); if (x) x.focus(); }
+    function closeCart() { $('#sc-ov').hidden = true; lock(); }
+    function closeProd() { $('#sc-md').hidden = true; lock(); }
+    function openProd(id) {
+      var p = P[id]; if (!p) return;
+      var c = $('#sc-mc'), g = el('div'), info = el('div', 'sc-info'), big = el('img', 'sc-big');
+      c.textContent = '';
+      var x = el('button', 'sc-x sc-mx', '✕'); x.type = 'button'; x.setAttribute('data-sp', 'mclose'); x.setAttribute('aria-label', D.t.close);
+      if (p.im[0]) { big.src = p.im[0]; big.alt = p.n; g.appendChild(big); }
+      if (p.im.length > 1) {
+        var th = el('div', 'sc-th');
+        p.im.forEach(function (u, i) { var t = el('img', i ? '' : 'on'); t.src = u; t.alt = ''; t.setAttribute('data-sp', 'thumb'); t.setAttribute('data-i', i); th.appendChild(t); });
+        g.appendChild(th);
+      }
+      info.appendChild(el('h3', '', p.n));
+      var pr = el('div', 'sp-pr'), now = el('span', 'sp-now' + (p.o ? ' is-promo' : ''), fmt(p.p));
+      pr.appendChild(now);
+      if (p.o) { pr.appendChild(el('s', 'sp-old', fmt(p.o))); pr.appendChild(el('span', 'sp-pct', '−' + Math.max(1, Math.round((1 - p.p / p.o) * 100)) + ' %')); }
+      info.appendChild(pr);
+      if (p.d) info.appendChild(el('p', 'sp-d', p.d));
+      var b = el('button', 'btn sp-add', p.a ? D.t.add : D.t.unavailable); b.type = 'button'; b.setAttribute('data-sp', 'madd'); if (!p.a) b.disabled = true;
+      info.appendChild(b);
+      c.appendChild(x); g.className = 'sc-gal'; c.appendChild(g); c.appendChild(info);
+      c.setAttribute('data-id', id);
+      $('#sc-md').hidden = false; lock(); x.focus();
+    }
+    function filter(f) {
+      cur = f;
+      $$('.sp-f').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-f') === f); });
+      $$('.sp').forEach(function (c) { c.hidden = !(f === 'all' || (f === 'promo' ? c.getAttribute('data-promo') === '1' : c.getAttribute('data-cat') === f)); });
+    }
+    function message(cust) {
+      var L = [];
+      if (D.o.msg) { L.push(D.o.msg); L.push(''); }
+      L.push(D.t.shopLbl + ' : ' + D.n); L.push(''); L.push(D.t.orderLbl + ' :');
+      Object.keys(cart).forEach(function (id) {
+        var p = P[id], q = cart[id];
+        L.push('- ' + q + ' × ' + p.n + ' — ' + fmt(p.p) + D.t.unit + ' = ' + fmt(p.p * q));
+      });
+      L.push(''); L.push('Total : ' + fmt(total()));
+      var cl = D.fields.filter(function (f) { return cust[f.k]; });
+      if (cl.length) { L.push(''); L.push(D.t.custLbl + ' :'); cl.forEach(function (f) { L.push(f.l + ' : ' + cust[f.k]); }); }
+      return L.join('\n');
+    }
+    function openUrl(u) { var w = null; try { w = window.open(u, '_blank'); } catch (e) { /* ignoré */ } if (!w) location.href = u; }
+    function copy(t) {
+      try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(t).catch(function () {}); return; } } catch (e) { /* repli */ }
+      try { var a = el('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; doc.body.appendChild(a); a.select(); doc.execCommand('copy'); a.remove(); } catch (e) { /* ignoré */ }
+    }
+    function order() {
+      var err = $('#sc-err'), note = $('#sc-note'), sum = $('#sc-sum');
+      err.textContent = ''; sum.hidden = true;
+      if (!count()) return;
+      var cust = {}, bad = '';
+      D.fields.forEach(function (f) { var v = ($('#sc-f-' + f.k).value || '').trim(); cust[f.k] = v; if (D.fr && !v && !bad) bad = f.l; });
+      if (bad) { err.textContent = D.t.need + ' ' + bad + '.'; return; }
+      var text = message(cust);
+      if (D.o.type === 'wa') {
+        if (!D.o.wa) { err.textContent = D.t.noWa; return; }
+        openUrl('https://wa.me/' + D.o.wa + '?text=' + encodeURIComponent(text));
+        note.textContent = D.t.waDone;
+      } else {
+        if (!D.o.url) { err.textContent = D.t.noUrl; return; }
+        if (D.o.url.indexOf('{message}') >= 0) {
+          openUrl(D.o.url.split('{message}').join(encodeURIComponent(text)));
+          note.textContent = D.t.linkMsgDone;
+        } else {
+          copy(text); sum.value = text; sum.hidden = false;
+          openUrl(D.o.url);
+          note.textContent = D.t.linkDone;
+        }
+      }
+    }
+    /* formulaire client (champs activés par le vendeur) */
+    var fm = $('#sc-form');
+    D.fields.forEach(function (f) {
+      var lb = el('label', '', f.l + (D.fr ? ' *' : '')), inp = el(f.k === 'notes' || f.k === 'address' ? 'textarea' : 'input');
+      inp.id = 'sc-f-' + f.k;
+      if (inp.tagName === 'TEXTAREA') inp.rows = 2; else { inp.type = f.k === 'phone' ? 'tel' : 'text'; if (f.k === 'phone') inp.setAttribute('inputmode', 'tel'); }
+      inp.autocomplete = 'off';
+      lb.appendChild(inp); fm.appendChild(lb);
+    });
+    var clr = false;
+    doc.addEventListener('click', function (e) {
+      var t = e.target.closest ? e.target.closest('[data-sp]') : null;
+      if (!t) {
+        if (e.target === $('#sc-ov')) closeCart();
+        if (e.target === $('#sc-md')) closeProd();
+        return;
+      }
+      var a = t.getAttribute('data-sp'), host = t.closest('[data-id]'), id = host ? host.getAttribute('data-id') : '';
+      if (a === 'add') add(id);
+      else if (a === 'open') openProd(id);
+      else if (a === 'madd') { add(id); }
+      else if (a === 'thumb') { $('.sc-big').src = t.src; $$('.sc-th img').forEach(function (i) { i.classList.toggle('on', i === t); }); }
+      else if (a === 'filter') filter(t.getAttribute('data-f'));
+      else if (a === 'cart') { closeProd(); openCart(); }
+      else if (a === 'close') closeCart();
+      else if (a === 'mclose') closeProd();
+      else if (a === 'inc') setQty(id, (cart[id] || 0) + 1);
+      else if (a === 'dec') setQty(id, (cart[id] || 0) - 1);
+      else if (a === 'rm') setQty(id, 0);
+      else if (a === 'order') order();
+      else if (a === 'clear') {
+        if (!clr) { clr = true; t.textContent = D.t.clearSure; clearTimeout(ctm); ctm = setTimeout(function () { clr = false; t.textContent = D.t.clear; }, 3500); }
+        else { clr = false; clearTimeout(ctm); t.textContent = D.t.clear; cart = {}; save(); renderAll(); $('#sc-sum').hidden = true; $('#sc-err').textContent = ''; }
+      }
+    });
+    doc.addEventListener('keydown', function (e) { if (e.key === 'Escape') { if (!$('#sc-md').hidden) closeProd(); else if (!$('#sc-ov').hidden) closeCart(); } });
+    window.addEventListener('storage', function (e) { if (e.key === D.k) { load(); renderAll(); } });
+    load(); renderAll(); filter(cur);
+  })();</script><div style="text-align:center;padding:10px 12px 16px;font:12px/1.4 system-ui,sans-serif"><a href="gestion-2pk7s6p2.html" rel="nofollow" style="color:inherit;opacity:.45;text-decoration:none">Gérer mon site</a></div><script>(function(){var d=document;d.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1);var t=id&&d.getElementById(id);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});var n=d.querySelector('.nav.open');if(n)n.classList.remove('open');}else if(!id){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});}});});var b=d.querySelector('.burger');if(b)b.addEventListener('click',function(){d.querySelector('.nav').classList.toggle('open');});var r=d.querySelectorAll('.reveal');if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});r.forEach(function(el){io.observe(el);});}else{r.forEach(function(el){el.classList.add('in');});}})();</script></body></html>
